@@ -1,5 +1,11 @@
 We use Quadratique for issues: every task is an issue there. Use the `quadratique` skill (`.agents/skills/quadratique/SKILL.md`) for anything about tasks.
 
+## Layout
+
+- Each component family keeps its files in one folder of `packages/joki-ui/src/`: `popover/`, `menu/`, `select/`. The folder holds the family's `.vue` parts, its context, its composable and its machine. A new part or a new family goes in its own family's folder.
+- Code that more than one family uses goes in `src/shared/`.
+- `tests/` has the same folders as `src/`, each with its own `fixtures/`.
+
 ## Branches and pull requests
 
 - Never work directly on `main`. GitHub blocks pushes to `main`. Changes go in through a pull request that is merged with a squash merge.
