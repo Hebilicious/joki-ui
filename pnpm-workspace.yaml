@@ -1,0 +1,27 @@
+packages:
+  - "packages/*"
+
+overrides:
+  # Vite+ installs its core as `vite` and pins the Vitest it bundles. Every plugin and runner that asks for `vite` or
+  # `vitest` resolves to those same copies, so the dev server, the build and `vp test` load one Vite and one Vitest.
+  vite: "npm:@voidzero-dev/vite-plus-core@8.3.8000"
+  vitest: 5.1.0
+  # Vite+ core takes TypeScript as an optional peer, which Vite did not; nothing here runs its TypeScript features.
+  "@voidzero-dev/vite-plus-core>typescript": "-"
+
+# Strict mode makes `pnpm add` write the version here and `catalog:` in the package.
+catalogMode: strict
+catalog:
+  "@testing-library/dom": "^10.4.2"
+  "@types/node": "^24.0.0"
+  "@vitest/browser-playwright": "5.1.0"
+  "@vizejs/vite-plugin": "0.786.0"
+  "@vue/runtime-vapor": "3.6.0-rc.16"
+  "@xstate/vue": "6.0.0-alpha.3"
+  playwright: "1.62.0"
+  tsrs: "7.1.0-beta.tsrs3"
+  vite-plus: "1.7.0"
+  vitest: "5.1.0"
+  vize: "0.786.0"
+  vue: "3.6.0-rc.16"
+  xstate: "6.0.0-alpha.61"

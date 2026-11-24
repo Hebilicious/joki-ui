@@ -1,0 +1,35 @@
+{
+  "name": "@joki-ui/vapor-testing",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Render and query Vue Vapor components in a real browser with Vitest Browser Mode.",
+  "type": "module",
+  "sideEffects": [
+    "./src/setup.ts"
+  ],
+  "exports": {
+    ".": "./src/index.ts",
+    "./setup": "./src/setup.ts",
+    "./stubs": "./src/stubs.ts",
+    "./vite": "./src/vite.ts"
+  },
+  "scripts": {
+    "typecheck": "vize check --tsrs-path node_modules/.bin/tsrs --tsconfig tsconfig.json src tests",
+    "test": "vp test run --config vitest.config.ts"
+  },
+  "dependencies": {
+    "@testing-library/dom": "catalog:",
+    "@vue/runtime-vapor": "catalog:",
+    "vue": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@vitest/browser-playwright": "catalog:",
+    "@vizejs/vite-plugin": "catalog:",
+    "playwright": "catalog:",
+    "tsrs": "catalog:",
+    "vite-plus": "catalog:",
+    "vitest": "catalog:",
+    "vize": "catalog:"
+  }
+}

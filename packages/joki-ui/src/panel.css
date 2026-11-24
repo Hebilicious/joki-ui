@@ -1,0 +1,67 @@
+/* These undo the browser's popover styles at zero specificity, so a panel's own stylesheet always wins. */
+:where([data-joki-panel]) {
+  position: fixed;
+  inset: auto;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  color: inherit;
+  background: none;
+}
+
+/* A browser without anchor positioning drops these. */
+
+@position-try --joki-shrink {
+  max-block-size: calc(100% - var(--joki-offset) - var(--joki-padding));
+}
+
+@position-try --joki-below-end {
+  position-area: block-end span-inline-start;
+  align-self: normal;
+  margin-block: var(--joki-offset) var(--joki-padding);
+  margin-inline: var(--joki-padding) 0;
+}
+
+@position-try --joki-above-end {
+  position-area: block-start span-inline-start;
+  align-self: normal;
+  margin-block: var(--joki-padding) var(--joki-offset);
+  margin-inline: var(--joki-padding) 0;
+}
+
+@position-try --joki-center-below {
+  position-area: block-end span-all;
+  justify-self: anchor-center;
+  align-self: normal;
+  margin-block: var(--joki-offset) var(--joki-padding);
+  margin-inline: var(--joki-padding);
+}
+
+@position-try --joki-center-above {
+  position-area: block-start span-all;
+  justify-self: anchor-center;
+  align-self: normal;
+  margin-block: var(--joki-padding) var(--joki-offset);
+  margin-inline: var(--joki-padding);
+}
+
+@position-try --joki-center-below-shrink {
+  position-area: block-end span-all;
+  justify-self: anchor-center;
+  align-self: normal;
+  margin-block: var(--joki-offset) var(--joki-padding);
+  margin-inline: var(--joki-padding);
+  max-block-size: calc(100% - var(--joki-offset) - var(--joki-padding));
+}
+
+@position-try --joki-center-above-shrink {
+  position-area: block-start span-all;
+  justify-self: anchor-center;
+  align-self: normal;
+  margin-block: var(--joki-padding) var(--joki-offset);
+  margin-inline: var(--joki-padding);
+  max-block-size: calc(100% - var(--joki-offset) - var(--joki-padding));
+}

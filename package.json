@@ -1,0 +1,15 @@
+{
+  "name": "joki-ui-workspace",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24 <25",
+    "pnpm": ">=12.14.0 <13"
+  },
+  "packageManager": "pnpm@12.14.0",
+  "scripts": {
+    "typecheck": "pnpm --recursive run typecheck",
+    "test": "pnpm --recursive run test",
+    "browsers:install": "pnpm --filter @joki-ui/vapor-testing exec playwright install chromium"
+  }
+}

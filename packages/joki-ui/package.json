@@ -1,0 +1,43 @@
+{
+  "name": "joki-ui",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Accessible, unstyled menus, selects and popovers for Vue Vapor, on the browser's top layer.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hebilicious/joki-ui.git",
+    "directory": "packages/joki-ui"
+  },
+  "type": "module",
+  "sideEffects": [
+    "**/*.vue",
+    "**/*.css"
+  ],
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "vize check --tsrs-path node_modules/.bin/tsrs --tsconfig tsconfig.json src tests",
+    "test": "vp test run --config vitest.config.ts"
+  },
+  "peerDependencies": {
+    "vue": "^3.6.0-rc.16"
+  },
+  "dependencies": {
+    "@xstate/vue": "catalog:",
+    "xstate": "catalog:"
+  },
+  "devDependencies": {
+    "@joki-ui/vapor-testing": "workspace:*",
+    "@types/node": "catalog:",
+    "@vitest/browser-playwright": "catalog:",
+    "@vizejs/vite-plugin": "catalog:",
+    "@vue/runtime-vapor": "catalog:",
+    "playwright": "catalog:",
+    "tsrs": "catalog:",
+    "vite-plus": "catalog:",
+    "vitest": "catalog:",
+    "vize": "catalog:",
+    "vue": "catalog:"
+  }
+}
