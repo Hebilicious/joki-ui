@@ -1,0 +1,20 @@
+projects:
+  workspace: "."
+  joki-ui: "packages/joki-ui"
+  vapor-testing: "packages/vapor-testing"
+
+defaultProject: "workspace"
+telemetry: false
+versionConstraint: ">=2.5.6 <2.6.0"
+
+vcs:
+  defaultBranch: "main"
+
+hasher:
+  walkStrategy: "glob"
+  ignorePatterns:
+    - "**/node_modules/**"
+
+pipeline:
+  installDependencies:
+    - "javascript"

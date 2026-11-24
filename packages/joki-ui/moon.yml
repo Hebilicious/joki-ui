@@ -1,0 +1,23 @@
+language: "typescript"
+layer: "library"
+
+project:
+  title: "joki-ui"
+  description: "Accessible, unstyled menus, selects and popovers for Vue Vapor, on the browser's top layer."
+
+toolchains:
+  default: ["javascript", "node", "pnpm"]
+
+tasks:
+  typecheck:
+    description: "Type-check the components, their tests and their Vue fixtures with Vize."
+    command: "vize"
+    args: ["check", "--tsrs-path", "node_modules/.bin/tsrs", "--tsconfig", "tsconfig.json", "src", "tests"]
+    inputs: ["src/**/*", "tests/**/*", "package.json", "tsconfig.json", "vitest.config.ts"]
+
+  test:
+    description: "Run the components' own tests in Chromium."
+    command: "vp"
+    args: ["test", "run", "--config", "vitest.config.ts"]
+    deps: ["vapor-testing:browser"]
+    inputs: ["src/**/*", "tests/**/*", "package.json", "tsconfig.json", "vitest.config.ts", "/packages/vapor-testing/src/**/*"]

@@ -8,11 +8,12 @@ renders Vapor components in Chromium for its tests and is not published. The wor
 
 ## Development
 
-Node and pnpm are pinned in `.prototools`; `proto install` installs them.
+proto installs Node, pnpm and Moon at the versions in `.prototools` (`proto install`). Moon runs every operation.
 
 ```sh
-pnpm install
-pnpm browsers:install   # Chromium for the browser tests, once
-pnpm typecheck          # every package
-pnpm test               # every package, in Chromium
+moon run verify                 # every check: type check and browser tests of each package
+moon run joki-ui:test           # one package's tests, in Chromium
+moon run joki-ui:typecheck      # one package's types
 ```
+
+Moon installs the Node dependencies and Chromium before the tasks that need them.

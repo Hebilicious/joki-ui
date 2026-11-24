@@ -1,0 +1,15 @@
+language: "typescript"
+layer: "automation"
+
+project:
+  title: "joki-ui workspace"
+  description: "The checks that span every package."
+
+toolchains:
+  default: ["javascript", "node", "pnpm"]
+
+tasks:
+  verify:
+    description: "Every check: the type check and the browser tests of each package."
+    command: "noop"
+    deps: ["joki-ui:typecheck", "joki-ui:test", "vapor-testing:typecheck", "vapor-testing:test"]

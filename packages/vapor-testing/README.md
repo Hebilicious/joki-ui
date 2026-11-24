@@ -42,4 +42,5 @@ component: `withProps`, `withModel`, `withSetup`, `harness`, `inScope`, `inFrame
 
 ## Tests
 
-`pnpm test` runs the library's own tests in Chromium; `pnpm typecheck` checks its types.
+`moon run vapor-testing:test` runs the library's own tests in Chromium; `moon run vapor-testing:typecheck` checks its
+types.

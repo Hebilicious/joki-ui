@@ -155,5 +155,5 @@ stack above an open panel.
 
 ## Tests
 
-`pnpm test` runs the library's tests in Chromium through [`@joki-ui/vapor-testing`](../vapor-testing/README.md);
-`pnpm typecheck` checks its types. Run `pnpm browsers:install` from the repository root once to download Chromium.
+`moon run joki-ui:test` runs the library's tests in Chromium through
+[`@joki-ui/vapor-testing`](../vapor-testing/README.md); `moon run joki-ui:typecheck` checks its types.

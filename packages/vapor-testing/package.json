@@ -13,10 +13,6 @@
     "./stubs": "./src/stubs.ts",
     "./vite": "./src/vite.ts"
   },
-  "scripts": {
-    "typecheck": "vize check --tsrs-path node_modules/.bin/tsrs --tsconfig tsconfig.json src tests",
-    "test": "vp test run --config vitest.config.ts"
-  },
   "dependencies": {
     "@testing-library/dom": "catalog:",
     "@vue/runtime-vapor": "catalog:",
