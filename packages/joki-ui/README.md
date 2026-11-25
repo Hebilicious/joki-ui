@@ -131,7 +131,7 @@ keep it inside the viewport, because the browser counts such a slide as not fitt
 - `data-side` and `--joki-transform-origin` name the requested side even after the browser flips the panel.
 - A panel whose anchor scrolls out of the viewport goes with it, where script placement holds it inside the padding.
 
-`tests/anchored-placement.test.ts` places a panel at each of these positions.
+`tests/shared/anchored-placement.test.ts` places a panel at each of these positions.
 
 Either way, the panel publishes three custom properties for its stylesheet:
 
